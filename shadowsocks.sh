@@ -342,7 +342,7 @@ install(){
         /etc/init.d/shadowsocks start
     else
         echo
-        echo -e "[${red}Error${plain}] Shadowsocks install failed! please visit https://teddysun.com/342.html and contact."
+        echo -e "[${red}Error${plain}] Shadowsocks install failed! please visit https://github.com/zjz1012/ssr and contact."
         install_cleanup
         exit 1
     fi
@@ -355,7 +355,7 @@ install(){
     echo -e "Your Password         : \033[41;37m ${shadowsockspwd} \033[0m"
     echo -e "Your Encryption Method: \033[41;37m ${shadowsockscipher} \033[0m"
     echo
-    echo "Welcome to visit:https://teddysun.com/342.html"
+    echo "Welcome to visit:https://github.com/zjz1012/ssr"
     echo "Enjoy it!"
     echo
 }
