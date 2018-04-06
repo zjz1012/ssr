@@ -1,1 +1,1 @@
-一键脚本搭建shadowsocksR 
+一键脚本搭建shadowsocks
