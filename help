@@ -1,0 +1,30 @@
+##############################安装方法#################################################
+wget --no-check-certificate https://github.com/zjz1012/ssr/blob/master/shadowsocks.sh
+chmod +x shadowsocks.sh
+./shadowsocks.sh 2>&1 | tee shadowsocks.log
+######################################################################################
+默认配置：
+服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）
+密码：自己设定（如不设定，默认为 teddysun.com）
+加密方式：自己设定（如不设定，默认为 aes-256-cfb）
+协议（Protocol）：自己设定（如不设定，默认为 origin）
+混淆（obfs）：自己设定（如不设定，默认为 plain）
+##############################卸载方法#################################################
+./shadowsocksR.sh uninstall
+##############################操作方法#################################################
+启动：/etc/init.d/shadowsocks start
+停止：/etc/init.d/shadowsocks stop
+重启：/etc/init.d/shadowsocks restart
+状态：/etc/init.d/shadowsocks status
+######################################################################################
+配置文件路径：/etc/shadowsocks.json
+日志文件路径：/var/log/shadowsocks.log
+代码安装目录：/usr/local/shadowsocks
+##############################防火墙配置方法############################################
+firewall-cmd --zone=public --add-port=80/tcp --permanent # 开80端口
+firewall-cmd --zone=public --add-port=23331/tcp --permanent # 开23331 TCP端口
+firewall-cmd --zone=public --add-port=23331/udp --permanent # 开23331 UDP端口
+firewall-cmd --zone=public --add-port=23333/tcp --permanent # 开23333 TCP端口
+firewall-cmd --zone=public --add-port=23333/udp --permanent # 开23333 UDP端口
+firewall-cmd --reload  # 重载配置
+iptables -L -n  # 查询防火墙规则
