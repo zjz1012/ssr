@@ -2,6 +2,11 @@
 wget --no-check-certificate https://raw.githubusercontent.com/zjz1012/ssr/master/shadowsocks.sh
 chmod +x shadowsocks.sh
 ./shadowsocks.sh 2>&1 | tee shadowsocks.log
+##############################新版本SSR安装方法#################################################
+wget --no-check-certificate https://raw.githubusercontent.com/zjz1012/ssr/master/ssr.sh
+chmod +x ssr.sh
+./ssr.sh 2>&1 | tee ssr.log
+新版本增加bbr、锐速安装
 ######################################################################################
 默认配置：
 服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）
